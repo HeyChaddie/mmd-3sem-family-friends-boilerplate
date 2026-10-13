@@ -1,5 +1,10 @@
 const Logo = () => {
-  return <h1>FamilyFriends</h1>;
+  return (
+    <div className="bg-blue-600 max-w-full flex flex-row justify-between">
+      <p>FamilyFriends</p>
+      <p>Bell</p>
+    </div>
+  );
 };
 
 export default Logo;
