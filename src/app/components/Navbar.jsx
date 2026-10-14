@@ -1,17 +1,30 @@
+import { PiHouse } from "react-icons/pi";
+import { GoStar } from "react-icons/go";
+import { IoChatbubbleOutline } from "react-icons/io5";
+import { BsPerson } from "react-icons/bs";
+
 const Navbar = () => {
   return (
-    <ul className="flex flex-row justify-around">
+    <ul className="flex flex-row justify-around items-center h-20 text-stone-400">
       <li>
-        <a href="/">home</a>
+        <a href="/">
+          <PiHouse size={30} />
+        </a>
       </li>
       <li>
-        <a href="/">favs</a>
+        <a href="/">
+          <GoStar size={30} />
+        </a>
       </li>
       <li>
-        <a href="/">msgs</a>
+        <a href="/">
+          <IoChatbubbleOutline size={30} />
+        </a>
       </li>
       <li>
-        <a href="/">prof</a>
+        <a href="/">
+          <BsPerson size={30} />
+        </a>
       </li>
     </ul>
   );

@@ -10,17 +10,17 @@ import Navbar from "./components/Navbar";
 export default function ListView() {
   return (
     <>
-      <header className="bg-white text-black max-w-94">
+      <header className="bg-white text-black w-full">
         <Statusbar />
         <Logo />
       </header>
 
-      <main className="bg-violet-400 p-4 max-w-94  max-h-full">
+      <main className="bg-white w-full grow pb-25">
         <Searchbar />
         <Dogslist />
       </main>
 
-      <nav className="bg-orange-300 max-w-94">
+      <nav className="fixed bottom-0 left-0 backdrop-blur-sm bg-gray-200/70 w-full pb-4">
         <Navbar />
       </nav>
     </>

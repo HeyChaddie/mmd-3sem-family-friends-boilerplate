@@ -2,22 +2,25 @@ import "@/app/globals.css";
 import Logo from "@/app/components/Logo";
 import Statusbar from "@/app/components/Statusbar";
 
-import Navbar from "@/app/components/Navbar";
+import Dogdetailedimage from "@/app/components/Dogdetailedimage";
+import Dogdetailedtext from "@/app/components/Dogdetailedtext";
 
-import Link from "next/link";
+import Navbar from "@/app/components/Navbar";
 
 const DetailView = () => {
   return (
     <>
-      <header className="bg-white text-black max-w-94">
+      <header className="bg-white text-black w-full">
         <Statusbar />
         <Logo />
       </header>
 
-      <h1>DetailView</h1>
-      <Link href="/">Back to ListView</Link>
+      <main className="bg-white w-full p-4 flex flex-col grow">
+        <Dogdetailedimage />
+        <Dogdetailedtext />
+      </main>
 
-      <nav className="bg-orange-300 max-w-94">
+      <nav className="fixed bottom-0 left-0 backdrop-blur-sm bg-gray-200/70 w-full pb-4">
         <Navbar />
       </nav>
     </>

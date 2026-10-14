@@ -1,8 +1,10 @@
+import { FaRegBell } from "react-icons/fa";
+
 const Logo = () => {
   return (
-    <div className="bg-blue-600 max-w-full flex flex-row justify-between">
-      <p>FamilyFriends</p>
-      <p>Bell</p>
+    <div className="w-full p-4 flex flex-row justify-between">
+      <h1 className="font-bold text-xl tracking-tighter">FamilyFriends</h1>
+      <FaRegBell size={24} />
     </div>
   );
 };
