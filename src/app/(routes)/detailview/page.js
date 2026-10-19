@@ -3,6 +3,7 @@ import Logo from "@/app/components/Logo";
 import Statusbar from "@/app/components/Statusbar";
 
 import Dogdetailedimage from "@/app/components/Dogdetailedimage";
+import Dogdetailedtitle from "@/app/components/Dogdetailedtitle";
 import Dogdetailedtext from "@/app/components/Dogdetailedtext";
 
 import Navbar from "@/app/components/Navbar";
@@ -15,8 +16,9 @@ const DetailView = () => {
         <Logo />
       </header>
 
-      <main className="bg-white w-full p-4 flex flex-col grow">
+      <main className="bg-white w-full p-4 flex flex-col grow pb-30">
         <Dogdetailedimage />
+        <Dogdetailedtitle />
         <Dogdetailedtext />
       </main>
 

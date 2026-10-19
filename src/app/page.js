@@ -15,7 +15,7 @@ export default function ListView() {
         <Logo />
       </header>
 
-      <main className="bg-white w-full grow pb-25">
+      <main className="bg-white w-full grow pb-30">
         <Searchbar />
         <Dogslist />
       </main>
