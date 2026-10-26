@@ -10,6 +10,7 @@ const Searchbar = () => {
         </button>
         <input
           type="search"
+          name="query"
           placeholder="search breed"
           className="bg-white border border-stone-300 w-full ml-4 rounded-4xl text-zinc-400 pl-6 pr-6"
         ></input>

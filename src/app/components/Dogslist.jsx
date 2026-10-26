@@ -3,11 +3,17 @@ import Link from "next/link";
 import { GoStar } from "react-icons/go";
 import { Suspense } from "react";
 
-const Dogslist = () => {
+const Dogslist = ({ searchParams }) => {
   return (
     <section className="w-full grid grid-cols-2 gap-4 p-4">
-      <Suspense fallback={<p>Loading dogs...</p>}>
-        <FetchData />
+      <Suspense
+        fallback={
+          <div className="h-100 flex justify-center items-center col-span-2">
+            <h3 className="text-black font-bold text-xl tracking-tighter">Loading Breeds...</h3>
+          </div>
+        }
+      >
+        <FetchData searchParams={searchParams} />
       </Suspense>
     </section>
   );
@@ -15,8 +21,11 @@ const Dogslist = () => {
 
 export default Dogslist;
 
-const FetchData = async () => {
-  const response = await fetch("https://api.thedogapi.com/v1/breeds", {
+const FetchData = async ({ searchParams }) => {
+  const { query } = await searchParams;
+  const url = query ? `https://api.thedogapi.com/v1/breeds/search?q=${query}` : "https://api.thedogapi.com/v1/breeds";
+
+  const response = await fetch(url, {
     headers: {
       "x-api-key": process.env.API_KEY,
     },
